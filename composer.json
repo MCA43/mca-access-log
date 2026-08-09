@@ -1,0 +1,61 @@
+{
+    "name": "mca/access-log",
+    "description": "HTTP access logging with IP filters, retention purge and firewall soft-integration (MCA Access suite).",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["laravel", "mca", "access-log", "ip", "logging", "security"],
+    "require": {
+        "php": "^8.3",
+        "laravel/framework": "^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^11.0",
+        "phpunit/phpunit": "^12.0"
+    },
+    "suggest": {
+        "mca/permission": "Root access middleware for access-log admin UI",
+        "mca/hub": "MCA package hub integration",
+        "mca/firewall": "Block IP from log UI and record blocked requests",
+        "mca/access-intel": "IP health scoring on top of access logs (Access suite)"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mca\\AccessLog\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mca\\AccessLog\\AccessLogServiceProvider"
+            ]
+        },
+        "mca": {
+            "slug": "access-log",
+            "title": {
+                "en": "Access Log",
+                "tr": "Erişim Günlüğü"
+            },
+            "description": {
+                "en": "HTTP request logging by IP with filters, retention and firewall actions.",
+                "tr": "IP bazlı HTTP istek günlüğü, filtreler, saklama süresi ve firewall aksiyonları."
+            },
+            "route": "mca.access-log.index",
+            "github": "https://github.com/MCA43/mca-access-log",
+            "icon": "list",
+            "order": 31,
+            "frameworks": ["laravel13"],
+            "suite": "access",
+            "suite_role": "log",
+            "suggests": ["mca/firewall", "mca/access-intel", "mca/permission", "mca/hub"],
+            "provides": ["access-logging"]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
