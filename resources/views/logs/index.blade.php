@@ -100,7 +100,7 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        <div class="mca-alog-pagination">{{ $logs->links() }}</div>
+                        <div class="mca-alog-pagination">{{ $logs->links('mca-access-log::partials.pagination') }}</div>
                     @endif
                 </div>
             </div>

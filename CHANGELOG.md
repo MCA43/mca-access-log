@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.1] - 2026-09-15
+
+### Fixed
+- Log listelerinde Laravel Tailwind sayfalamanın SVG oklarının aşırı büyümesi (özel pagination view + CSS)
+
 ## [0.1.0] - 2026-08-09
 
 ### Added

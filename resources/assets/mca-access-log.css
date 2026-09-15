@@ -137,3 +137,16 @@
 .mca-alog-pagination {
     margin-top: 1rem;
 }
+
+.mca-alog-pagination .mca-ui-pagination {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+}
+
+.mca-alog-pagination nav[role="navigation"] svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    max-width: 1.25rem;
+    max-height: 1.25rem;
+}
